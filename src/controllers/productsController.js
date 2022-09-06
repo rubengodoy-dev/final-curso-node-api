@@ -26,12 +26,12 @@ const getById = async (req, res) => {
 
     let result = await productService.getById(id);
     if (result.success) {
-      res.status(200).json(result.body);
-      // if (result.body) {
-      //   res.status(200).json(result.body);
-      // } else {
-      //   res.status(200).json({message:"Not found"});
-      // }
+    //  res.status(200).json(result.body);
+      if (result.body) {
+        res.status(200).json(result.body);
+      } else {
+        res.status(200).json({message:"Producto no encontrado"});
+      }
 
     } else {
       let { error } = result
