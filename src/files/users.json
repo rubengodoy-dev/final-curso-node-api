@@ -1,0 +1,23 @@
+[
+	{
+		"first_name": "Ruben",
+		"last_name": "Godoy",
+		"job": "developer",
+		"enterprise": "Telecom",
+		"id": 1
+	},
+	{
+		"first_name": "Alex",
+		"last_name": "Marin Mendez",
+		"job": "Teacher",
+		"enterprise": "Coderhouse",
+		"id": 2
+	},
+	{
+		"first_name": "rubens",
+		"last_name": "godosy",
+		"enterprise": "teco",
+		"job": "dev",
+		"id": 3
+	}
+]
