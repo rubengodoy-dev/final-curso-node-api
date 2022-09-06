@@ -15,7 +15,7 @@ export default class CartsOrdersService {
             const cartObj = await cartService.getById(id);
             if (cartObj.success) {
                 const newOrder = {
-                    timestamp: 0,
+                    date: new Date().toLocaleString(),
                     products: cartObj.body.products,
                     state: "generada",
                     email: cartObj.body.email

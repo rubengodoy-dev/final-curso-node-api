@@ -48,8 +48,9 @@ export default class OrdersService {
 
   add = async (entityData) => {
     try {
-      if (entityData.timestamp === 0) {
+      if (entityData.date === "") {
         //create timestamp
+        entityData.date = new Date().toLocaleString()
       }
      
       const result = await this.orderDao.save(entityData)

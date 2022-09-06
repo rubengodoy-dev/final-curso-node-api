@@ -7,9 +7,9 @@ const schema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    timestamp: {
-        type: Number,
-        required: false,
+    date: {
+        type: String,
+        required: [true, 'Fecha es obligatorio'],
     },
     products: { type: Array, "default": [] },
 

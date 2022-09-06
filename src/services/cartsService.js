@@ -39,6 +39,13 @@ export default class CartsService {
 
   add = async (entityData) => {
     try {
+      console.log("entityData")
+      console.log(entityData)
+      if (entityData.date === "") {
+        //create timestamp
+        entityData.date = new Date().toLocaleString()
+      }
+      
       const result = await this.cartDao.save(entityData)
       return { success: true, body: result }
     } catch (err) {
@@ -91,7 +98,7 @@ export default class CartsService {
         else {
           //si no se encuentra agregar
 
-          
+
 
           cartObject.products.push({
             id: productId,

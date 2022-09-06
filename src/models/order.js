@@ -4,9 +4,9 @@ const collectionName = 'orders';
 
 const schema = new mongoose.Schema({
 
-    timestamp: {
-        type: Number,
-        required: false,
+    date: {
+        type: String,
+        required: [true, 'Fecha es obligatorio'],
     },
     products: { type: Array, "default": [] },
 
